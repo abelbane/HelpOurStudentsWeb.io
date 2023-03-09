@@ -1,0 +1,900 @@
+/*====================GOOGLE FONTS================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*======================BASE | RESET===============*/
+:root{
+    --lightBrown:rgb(255,231,123);
+}
+*{
+    
+    margin: 0;
+    padding: 0;
+    /*If you set box-sizing: border-box; on an element, padding and border are included in the width and height:*/
+    box-sizing: border-box;   
+    font-family: 'Poppins',sans-serif;
+    
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #FFF;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  url(sample_banner2.jpg);
+    background-size: cover;
+}
+.banner .content {
+    /* sample_banner: 900px; */
+    text-align: center;
+}
+.banner .content h2 {
+    font-size: 5em;
+    color: #FFF;
+}
+.banner .content p {
+    font-size: 1.5em;
+    color: #FFF;
+}
+.btn{
+    font-size: 1.1em;
+    color: #FFF;
+    /* background: var(--lightBrown); */
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 15px;
+    border-style: solid;
+}
+.btn:hover{
+    letter-spacing: 6px;
+    border-radius: 15px;
+}
+
+.btnDirectors{
+    font-size: 1.1em;
+    color: #000000;
+    /* background: var(--lightBrown); */
+    display: inline-block;
+    padding: 5px 5px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 15px;
+    border-style: solid;
+}
+.btnDirectors:hover{
+    letter-spacing: 6px;
+    border-radius: 15px;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    color: black;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    font-weight: 900;
+    background: rgb(255, 255, 255);
+}
+header.sticky{
+    background: #FFF;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0, 0.05);
+}
+header .logo{ 
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    float: left;
+}
+header.sticky .logo{
+    color: black;
+}
+header .logo span{
+    color: var(--lightBrown);  
+}
+header .navigation ul{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+header .navigation a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+}
+header .navigation a:hover{ 
+    color: var(--lightBrown);
+}
+header.sticky a{
+    color: black;
+    font-weight: 900;
+}
+p{
+    font-size: 1.1em;
+    color: black;
+}
+section{
+    padding: 100px;
+}
+.row{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    justify-content: space-between;
+}
+.row .col50{
+    position: relative;
+    width: 100% ;
+    display: block;
+    
+}
+.row .col50 .paragraphBox{
+    float: left;
+    width: 70%;
+    text-align: justify;
+}
+
+
+.titleText{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.titleText2{
+    float: left;
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.titleText2 span{
+    color: var(--lightBrown);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.titleText span{
+    color: var(--lightBrown);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.row .col50 .imgBx{
+    position: relative; 
+     width: 25%;
+     min-height: 300px; 
+     height: 25%; 
+     float: right;
+     
+}
+.row .col50 .imgBx img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.works .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+    margin-top: 40px;
+}
+.works .content .box{
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0, 0.3);
+    
+}
+.works .content .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.works .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.works .content .box .text{
+    padding: 15px 0 5px;
+}
+.works .content .box .text h3{
+    font-weight: 400;
+    color: #111;
+}
+.skills{
+    background: rgb(235, 235, 235);
+    
+    /* background: linear-gradient(-45deg,#e9f7cf,#549788,#6eeeb9,#9a63e2); */
+    /* background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite; */
+    
+}
+
+.skills .content{
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin-top: 40px;
+    
+}
+.skills .content span{
+    color: var(--lightBrown);
+}
+
+.skills .content .box{
+    width: 280px;
+    margin: 20px;   
+}
+.skills .content .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.skills .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.skills .content .box .text{
+    padding: 15px 0 5px;
+}
+.skills .content .box .text h3{
+    font-weight: 400;
+    color: #111;
+}
+.contact .content .col50{
+    width: 48%;
+    display: flex;
+    
+}
+.contactForm{
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.contactForm h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+} 
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* @keyframes change {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+    
+} */
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline:  none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+.contactForm .inputBox input[type="submit"]{
+    font-size: 1.1em;
+    color: #fff;
+    background: var(--lightBrown);
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 200px;
+    font-weight: 500;
+    border:none;
+    cursor: pointer;
+}
+
+.contact{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  }
+  .wrapper{
+    display: inline-flex;
+  }
+  .wrapper .icon{
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span i{
+    line-height: 60px;
+    font-size: 25px;
+  }
+  .wrapper .icon .tooltip{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip{
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .icon .tooltip:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .facebook:hover span,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip:before{
+    background: #3B5999;
+  }
+  .wrapper .twitter:hover span,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip:before{
+    background: #46C1F6;
+  }
+  .wrapper .instagram:hover span,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip:before{
+    background: #e1306c;
+  }
+  .wrapper .github:hover span,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip:before{
+    background: #333;
+  }
+  .wrapper .youtube:hover span,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip:before{
+    background: #DE463B;
+  }
+  .wrapper .linkedin:hover span,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip:before{
+    background: var(--lightBrown);
+  }
+  .contact .wrapper a{
+      text-decoration: none;
+      color: black;
+  }
+
+
+    
+
+@media screen and (max-width: 768px) {
+    header{
+        display: inline-block;  
+        margin: 10px auto;
+        padding: 0%;
+        background: white;
+        
+    }
+  
+    header .logo{
+        position: relative;
+        margin: 10px 45% 0;
+        
+       
+        
+    }
+    header .navigation{
+        float: none;
+        clear: left;
+        width: 100%;       
+    }
+    header .navigation li{
+        margin: 10px 0;
+        width: 16%;
+        padding: 0;
+        text-align: center;
+    }
+    .banner{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:  url(sample_banner2.jpg);
+        background-position:center;
+        background-size:cover;
+    }
+    .banner .content p {
+        font-size: 1em;
+        color: #FFF;
+    }
+
+    .row .col50 .imgBx{
+        position: relative; 
+         width: 100%;
+         min-height: 300px; 
+         height: 100%;    
+    }
+    .row{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+    .row .col50{
+        position: relative;
+        width: 100% ;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+    }
+    .row .col50 .imgBx img{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        order: 1;
+    }
+    p{
+        order: 3;
+    }
+}
+
+
+/*=====================MOBILE=====================*/
+@media screen and (max-width: 1321px) {
+    .banner .content h2 {
+        font-size: 3.5em;
+        color: #FFF;
+    }
+    .btn{
+        font-size: 1.1em;
+        color: #FFF;
+        /* background: var(--lightBrown); */
+        display: inline-block;
+        padding: 8px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        border-radius: 15px;
+        border-style: solid;
+
+    }
+ 
+    header{
+        display: inline-block;  
+        margin: 10px auto;
+        padding: 5%;
+        
+    }
+    
+    header .logo{
+        width: 100%;
+        margin: 10px 40% 0;
+        float: left;    
+    }
+    header.sticky{
+        background: white;
+        padding: 5%;
+        margin-top: 0;
+        margin-right: 20%;
+        /* box-shadow: 0 5px 20px rgba(0,0,0, 0.05); */
+        }
+      
+        header.sticky .logo{
+            color: black;
+            
+        }
+       header .burger-nav{
+        float: right;
+        margin-top: 2px;
+        display: block;
+        height: 40px;
+        width: 100%;
+        background: url(burger.png) no-repeat 98% center;
+ 
+        cursor: pointer;
+    }
+  
+    header nav ul{
+        overflow: hidden;
+        background: white;
+        height: 0;
+    }
+
+    header nav ul.open{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    header nav ul li{
+        margin: 0;
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+    header nav ul li a{
+        color: white;
+        padding: 10px;
+        /* border-bottom: 1px solid #404040; */
+        margin: 0;
+        width: 100%;
+    }
+   
+   
+    header nav ul.open{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    header nav ul.open li{
+        background: white;
+        margin: 0;
+        color: black;
+        float: none;
+        text-align: right;
+        width: 100%;
+    }
+ 
+    
+    header.sticky nav ul li{
+        background: white;
+        margin: 0;
+        float: none;
+        text-align: right;
+        width: 100%;
+    }
+ 
+    header nav ul li{
+        margin: 0;
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+    header nav ul li a{
+        color: white;
+        padding: 10px;
+        /* border-bottom: 1px solid #404040; */
+        margin: 0;
+        width: 100%;
+    }
+    header nav ul.open li a{
+        color: black;
+        padding: 20px;
+        /* border-bottom: 1px solid #404040; */
+        margin: 0;
+        width: 100%;
+    }
+    
+
+
+    .banner{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:  url(sample_banner2.jpg);
+        background-position:center;
+        background-size:cover;
+    }
+    .about{
+        padding: 10%;
+    }
+
+    .works{
+        margin-top: 0;
+        padding: 5%;
+    }
+    .title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .works .content{
+        display: flex;
+      
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+  
+    
+    .row{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+
+    }
+    .row .col50{
+        position: relative;
+        width: 100% ;
+        text-align: justify;
+    }
+    .row .col50 .titleText{
+        width: 100%;
+        margin-left: 20%;
+        /* order: 1; */
+    }
+    p{
+        /* order: 2; */
+        text-align: justify;
+        float: left;
+    }
+    .row .col50 .imgBx{
+        float: right;
+        /* width: 100%;
+        height: 100%; */
+
+    }
+    .row .col50 .imgBx img{
+        
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+
+    .skills{
+        padding: 5%;
+    }
+    .skills h2{
+        font-size: 2em;
+    }
+
+
+    .contact{
+        display: grid;
+        padding: 10%;
+        width: 100%;
+        place-items: center;
+        background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+      }
+      .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+
+      
+      }
+      .wrapper .icon{
+        padding: 5%;
+        margin: 0 20px;
+        text-align: center;
+        cursor: pointer;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon span{
+        display: block;
+        height: 60px;
+        width: 60px;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon span i{
+        line-height: 60px;
+        font-size: 25px;
+      }
+      .wrapper .icon .tooltip{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: #fff;
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 25px;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover .tooltip{
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .icon .tooltip:before{
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(45deg);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover span{
+        color: #fff;
+      }
+      .wrapper .icon:hover span,
+      .wrapper .icon:hover .tooltip{
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+      }
+      .wrapper .facebook:hover span,
+      .wrapper .facebook:hover .tooltip,
+      .wrapper .facebook:hover .tooltip:before{
+        background: #3B5999;
+      }
+      .wrapper .twitter:hover span,
+      .wrapper .twitter:hover .tooltip,
+      .wrapper .twitter:hover .tooltip:before{
+        background: #46C1F6;
+      }
+      .wrapper .instagram:hover span,
+      .wrapper .instagram:hover .tooltip,
+      .wrapper .instagram:hover .tooltip:before{
+        background: #e1306c;
+      }
+      .wrapper .github:hover span,
+      .wrapper .github:hover .tooltip,
+      .wrapper .github:hover .tooltip:before{
+        background: #333;
+      }
+      .wrapper .youtube:hover span,
+      .wrapper .youtube:hover .tooltip,
+      .wrapper .youtube:hover .tooltip:before{
+        background: #DE463B;
+      }
+      .wrapper .linkedin:hover span,
+      .wrapper .linkedin:hover .tooltip,
+      .wrapper .linkedin:hover .tooltip:before{
+        background: var(--lightBrown);
+      }
+      .contact .wrapper a{
+          text-decoration: none;
+          color: black;
+      }
+
+    
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
