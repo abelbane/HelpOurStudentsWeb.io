@@ -5,6 +5,7 @@
 :root {
   --lightBrown: rgb(255, 231, 123);
   --hoverBrownrgb: rgb(265, 241, 133);
+  --bgBrown: rgb(253, 250, 237);
 }
 * {
   margin: 0;
@@ -20,6 +21,10 @@ p {
   font-weight: 300;
   color: #fff;
 }
+.references{
+  text-decoration: underline;
+  color: black;
+}
 .banner {
   position: relative;
   width: 100%;
@@ -27,7 +32,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(sample_banner2.jpg);
+  background: url(FoundationforGiving.jpg);
   background-size: cover;
 }
 .banner .content {
@@ -42,6 +47,72 @@ p {
 .banner .content p {
   font-size: 1.5em;
   color: #fff;
+}
+.letters{
+  width: 100%;
+}
+.letters .row{
+  width: 50%;
+}
+.reports .row{
+  width: 50%;
+}
+.letters .row .col50 .paragraphBox{
+  width: 100%;
+}
+.reports .row .col50 .paragraphBox{
+  width: 100%;
+}
+#myVideo {
+  background-size: contain;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.works .content {
+  overflow: scroll;
+  padding-top: 250px;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.works .contact{
+  color: white;
+  background: none;
+  width: 100%;
+  align-items: center;
+
+}
+.works .contact p{
+  color: white;
+
+
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
 }
 .btn {
   font-size: 1.1em;
@@ -109,8 +180,9 @@ header {
   border: none;
   border-radius: 15px;
   box-shadow: 0 5px #999;
+}.contDirectors{
+  background-color: var(--bgBrown);
 }
-
 button {
   top: 50%;
   background-color: #0a0a23;
@@ -248,12 +320,13 @@ section {
   align-items: center;
   flex-direction: column;
 }
-.works .content {
-  display: flex;
+
+ .works {
+  display: inline-block;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
+  padding-top: 20%;
+} 
+
 .works .content .box {
   width: 340px;
   margin: 20px;
@@ -264,6 +337,9 @@ section {
   position: relative;
   width: 100%;
   height: 600px;
+}
+.works .content p  {
+  color: white;
 }
 .works .content .box .imgBx img {
   position: absolute;
@@ -316,7 +392,6 @@ section {
 }
 .directors .content .textBox {
   width: 100%;
-  margin: 20px;
 }
 .directors .content .box .imgBx img {
   position: absolute;
@@ -531,7 +606,7 @@ section {
   height: 20%;
   width: 100%;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  background: linear-gradient(315deg, #ffffff 0%, #ffd967 74%);
 }
 .wrapper {
   display: inline-flex;
@@ -691,6 +766,15 @@ section {
     font-size: 1em;
     color: #fff;
   }
+  .reports{
+    margin-top: 20%;
+  }
+  .reports .row {
+    width: 100%;
+    padding: 5%;}
+  .letters .row {
+    width: 100%;
+    padding: 5%;}
 
   .row .col50 .imgBx {
     position: relative;
@@ -759,8 +843,7 @@ section {
 
   header {
     display: inline-block;
-    margin: 10px auto;
-    padding: 5%;
+   
   }
 
   header .logo {
@@ -892,11 +975,15 @@ section {
   }
 
   .works .content {
-    display: flex;
-
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 0;
+    align-items: center;
+    text-align: center;
   }
 
   .row {
@@ -942,10 +1029,9 @@ section {
 
   .contact {
     display: grid;
-    padding: 10%;
     width: 100%;
     place-items: center;
-    background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    background: linear-gradient(315deg, #ffffff 0%, #ffc99d 74%);
   }
   .wrapper {
     display: flex;
